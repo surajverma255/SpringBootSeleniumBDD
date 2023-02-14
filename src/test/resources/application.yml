@@ -1,0 +1,33 @@
+spring.banner.location: classpath:traytbanner.txt
+screenshot.path: src/test/resources/screenshots
+browser: chrome
+default.timeout: 30
+---
+spring.config.activate.on-profile: dev
+clinician-portal:
+  url: https://dev.portal.trayt.io/
+  credentials: "{AUTO_ADMIN:'autotchattdev+auto1@gmail.com=Tchatt123$',AUTO_ADMIN2:'neelima.trayt+autotchattdev2@gmail.com=Tchatt123$'}"
+
+school-portal:
+  url: https://dev.tchattschools.trayt.health/
+  credentials: "{AUTO_ADMIN:'neelima.trayt+dbschoolportal@gmail.com=Trayt@12'}"
+
+---
+spring.config.activate.on-profile: qa
+clinician-portal:
+  url: https://qa.portal.trayt.health/
+  credentials: "{AUTO_ADMIN:'autotchattqa+auto1@gmail.com=Tchatt123$'}"
+
+school-portal:
+  url: https://qa.tchattschools.trayt.health/
+  credentials: "{AUTO_ADMIN:'neelima.trayt+qaschool@gmail.com=Trayt@12'}"
+
+---
+spring.config.activate.on-profile: stage
+clinician-portal:
+  url: https://staging.portal.trayt.io/
+  credentials: "{AUTO_ADMIN:'autotchattstg@gmail.com=Tchatt123$'}"
+
+school-portal:
+  url: https://staging.tchattschools.trayt.health/
+  credentials: "{AUTO_ADMIN:'neelima.trayt+stageschoolportal1@gmail.com=School123$'}"
